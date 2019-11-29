@@ -3,7 +3,7 @@ from flask_login import login_user,logout_user,current_user
 from app.auth import auth
 from app.auth.forms import LoginForm,RegisterForm
 from app.models import User
-from ..email import mail_message
+# from ..email import mail_message
 
 @auth.route('/login',methods=['GET','POST'])
 def login():
@@ -17,8 +17,9 @@ def login():
             next_url = request.args.get('next')
             return redirect(next_url) if next_url else redirect(url_for('main.index'))
         else:
-            flash('Unsuccessful Login.Please  confirm your email and password details', 'danger')
+            flash('Unsuccessful Login.Please confirm your email and password details', 'danger')
         return render_template('auth/login.html', title='Login', form=form)
+    return render_template('auth/login.html',form=form,title='login')
 
 @auth.route('/signup',methods=['GET','POST'])
 def signup():
