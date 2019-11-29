@@ -20,4 +20,19 @@ def login():
             flash('Unsuccessful Login.Please  confirm your email and password details', 'danger')
         return render_template('auth/login.html', title='Login', form=form)
 
+@auth.route('/signup',methods=['GET','POST'])
+def signup():
+    form = RegisterForm()
+    if form.validate_on_submit():
+        username = form.username.data
+        email = form.email.data
+        password = form.password.data
+        user = User(username=username,email=email)
+        user.set_password(password)
+        mail_message('Hello,welcome to Blog','email/welcome_user',user.email,{'user':user})
+        user.save()
+        flash(f'Account created for {form.username.data}!,''success')
+        return redirect(url_for('auth.login'))
+    return render_template('auth/signup.html')
+
     
