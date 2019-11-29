@@ -3,7 +3,7 @@ from flask_bootstrap import Bootstrap
 from flask_login import LoginManager
 from flask_mail import Mail
 from flask_sqlalchemy import SQLAlchemy
-from config import config
+from config import Config
 
 app = Flask(__name__)
 db = SQLAlchemy(app)
@@ -16,10 +16,11 @@ login_manager.session_protection = 'strong'
 login_manager.login_message = 'info'
 
 
-def create_app():
+def create_app(config_name):
     app.config.from_object(Config)
     from .auth import auth as auth_blueprint
+    app.register_blueprint(auth_blueprint,url_prefix='/auth')
     from .main import main as main_blueprint
-    app.register_blueprint(auth_blueprint)
+
     app.register_blueprint(main_blueprint)
     return app
