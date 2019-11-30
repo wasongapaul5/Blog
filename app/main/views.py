@@ -1,12 +1,16 @@
-from flask import render_template,url_for,redirect,request,flash,abort
 import os
 import secrets
-from app import app,db
-from app.main.forms import UpdateAccountForm,PostForm
-from app.models import Post,Clap,Comment
+
+from PIL import Image
+from flask import render_template, url_for, redirect, request, flash, abort
+from flask_login import current_user, login_required
+
+from . import app
+from app import db
+from app.main import main
+from app.main.forms import UpdateAccountForm, PostForm
+from app.models import Post, Clap, Comment
 from app.requests import getQuotes
-from . import main
-from flask_login import login_required,current_user
 
 
 @main.route('/')
@@ -30,3 +34,22 @@ def save_picture(form_picture):
     i.save(picture_path)
 
     return picture_fn
+
+@main.route('/profile',methods=['GET','POST'])
+@login_required
+def profile():
+    form = UpdateAccountForm()
+    if form.picture.data:
+        picture_file = save_picture(form.picture.data)
+        current_user.image_file = picture_file
+        current_user.username = form.username.data
+        current_user.email = form.email.data
+        db.session.commit()
+        flash('Your account has been updated successfully!')
+        return redirect(url_for('main.profile'))
+    elif request.method == 'GET':
+        form.username.data = current_user.username
+        form.email.data = current_user.email
+        image_file = url_for('static',filename='profile_pic/' + current_user.image_file)
+        return render_template('profile/profile.html',title='Profile', imag_file=image_file,form=form)
+        
