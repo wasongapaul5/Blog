@@ -6,8 +6,7 @@ class Config:
     SECRET_KEY = 'wasonga'
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
-    SENDGRID_API_KEY=os.environ.get('SENDGRID_API_KEY')
-    DEFAULT_SENDGRID_SENDER =  os.environ.get('DEFAULT_SENDGRID_SENDER')
+
     
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:12345@localhost/blog'
     SQLALCHEMY_TRACK_MODIFICATIONS = False

@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
     {% block styles %}
@@ -11,11 +10,20 @@
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+
+    <link href="https://fonts.googleapis.com/css?family=Bevan&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playball&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merienda&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Philosopher&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Calistoga|Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
     {% endblock %}
 </head>
 <body>
 {% block navbar %}
+
 {%include 'navbar.html'%}
+
 {% endblock %}
 <main role="main" class="container">
     <div class="row">
@@ -52,3 +60,243 @@
 {% endblock %}
 </body>
 </html>
+
+<style>
+    body{
+        margin-top:10%;
+        background-image: url("https://cdn.pixabay.com/photo/2016/04/24/17/27/wood-1350175__340.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+ 
+    nav{
+        background-color:black;
+    }
+.navbar-brand{
+    font-weight: bolder;
+    font-family: 'Bevan', cursive;
+    
+}
+
+.nav-item{
+    font-weight: bolder;
+    color:white;
+    font-family: 'Bevan', cursive;
+    font-size: 20px;
+    padding:20px;
+}
+
+.nav-item a:{
+    color:red;
+}
+
+#jam{
+    box-shadow: 20px 20px 2px 0 black;
+}
+h1{
+    font-weight: bolder;
+    text-align: center;
+}
+
+h3{
+    font-weight: bolder;
+    font-size: 60px;
+    font-family: 'Kaushan Script', cursive;
+    color:blue;
+}
+
+h2{
+    font-weight: bolder;
+    font-family: 'Merienda', cursive;
+}
+h4{
+    font-family: 'Calistoga', cursive;
+    font-weight: normal;
+}
+
+.car{
+    color:#673ab7;
+    font-size: bolder;
+    font-size: 20px;
+}
+.content-section {
+  margin:8px;
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+}
+
+.ac{
+    font-weight: bolder;
+    font-family: 'Merienda', cursive;
+    text-align: center;
+    font-size: 50px;
+}
+.konteina{
+    box-shadow: 10px 10px 10px 10px black;
+    padding:20px;
+    background-image: url("https://cdn.pixabay.com/photo/2016/04/24/17/27/wood-1350175__340.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-title{
+    font-weight: bolder;
+}
+
+.article-metadata a:hover {
+  color:red;
+  text-decoration: none;
+}
+
+.article-content-1{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.media {
+    box-shadow: 10px 10px 10px 10px #00000099;
+    margin:20px;
+    padding:40px;
+}
+
+#com{
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+#paul,#oket{
+    font-weight: bolder;
+}
+
+#lor{
+    font-weight: bold;
+}
+
+.para{
+    padding:20px;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.container-1{
+    border:3px solid black;
+}
+
+.mr-2{
+    font-weight: bolder;
+    padding:10px;
+    font-size: 30px;
+    font-family: 'Kaushan Script', cursive;
+    
+}
+
+.picar{
+    height:190px;
+    width:190px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+}
+
+
+.article-metadata-1{
+    text-align: center;
+}
+
+.article-content{
+    font-size: 20px;
+    font-family: 'Calistoga', cursive;
+}
+
+.article-title-tito{
+    font-weight: bolder;
+    font-size: 60px;
+    font-family: 'Kaushan Script', cursive;
+    color:blue;
+    text-align: center;
+}
+
+.taim{
+    font-weight: bolder;
+}
+
+
+.bg-steel {
+  background-color: #5f788a;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #cbd5db;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+.content-section {
+  margin:8px;
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  padding-bottom: 20px;
+}
+
+.article-title {
+  color: #444444;
+}
+
+a.article-title:hover {
+  color: #428bca;
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+}
+
+.article-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3
+}
+
+.article-metadata a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+
+.commentname{
+font-size:17px;
+}
+
+.commentcomment{
+font-size:15px;
+}
+
+</style>
