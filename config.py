@@ -2,7 +2,7 @@ import os
 
 class Config:
     debug = True
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
+    
     SECRET_KEY = 'wasonga'
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
@@ -19,7 +19,7 @@ class Config:
 
 
 class ProdConfig(Config):
-    pass
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
 
 
 class DevConfig(Config):
