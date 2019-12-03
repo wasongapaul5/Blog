@@ -18,7 +18,6 @@ class Config:
     MAIL_USE_SSL = True
 
 
-
 class ProdConfig(Config):
     pass
 
