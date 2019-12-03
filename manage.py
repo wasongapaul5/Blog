@@ -15,7 +15,7 @@ manager.add_command('db', MigrateCommand)
 
 @manager.shell
 def add_shell_context():
-    return {'db': db, 'User': User}
+    return {'app':app,'db':db,'User':User}
 
 
 if __name__ == '__main__':
