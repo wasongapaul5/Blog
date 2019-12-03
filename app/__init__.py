@@ -21,7 +21,7 @@ login_manager.session_protection = 'strong'
 login_manager.login_message_category = 'info'
 
 
-def create_app():
+def create_app(config_name):
     app.config.from_object(Config)
     from .auth import auth as auth_blueprint
     from .main import main as main_blueprint
