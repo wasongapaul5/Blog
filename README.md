@@ -5,10 +5,10 @@
 > Wasonga Paul O.
 
 ## Previews
-<img src="https://github.com/wasongapaul5/Blog/blob/master/app/static/screenshots/Screenshot%20from%202019-12-03%2008-22-25.png?raw=true" width="500px">
-<img src="https://github.com/wasongapaul5/Blog/blob/master/app/static/screenshots/Screenshot%20from%202019-12-03%2008-23-23.png?raw=true" width="500px">
-<img src="https://github.com/wasongapaul5/Blog/blob/master/app/static/screenshots/Screenshot%20from%202019-12-03%2008-23-32.png?raw=true" width="500px">
-<img src="https://github.com/wasongapaul5/Blog/blob/master/app/static/screenshots/Screenshot%20from%202019-12-03%2008-24-06.png?raw=true" width="500px">
+<img src="https://github.com/wasongapaul5/Blog/blob/master/app/static/screenshots/Screenshot%20from%202019-12-03%2008-22-25.png?raw=true" width="800px">
+<img src="https://github.com/wasongapaul5/Blog/blob/master/app/static/screenshots/Screenshot%20from%202019-12-03%2008-23-23.png?raw=true" width="800px">
+<img src="https://github.com/wasongapaul5/Blog/blob/master/app/static/screenshots/Screenshot%20from%202019-12-03%2008-23-32.png?raw=true" width="800px">
+<img src="https://github.com/wasongapaul5/Blog/blob/master/app/static/screenshots/Screenshot%20from%202019-12-03%2008-24-06.png?raw=true" width="800px">
 
 ## Requirements
 > **pip freeze -r requirements.txt**
