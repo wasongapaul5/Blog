@@ -46,7 +46,7 @@ def profile():
         current_user.username = form.username.data
         current_user.email = form.email.data
         db.session.commit()
-        flash('Hi,your account has been updated successfully! ')
+        flash('Your account has been updated!', 'success')
         return redirect(url_for('main.profile'))
     elif request.method == 'GET':
         form.username.data = current_user.username
@@ -62,7 +62,7 @@ def new_post():
     if form.validate_on_submit():
         post = Post(title=form.title.data, content=form.content.data, author=current_user)
         post.save()
-        flash('Hi,your post has been created successfully!', 'success')
+        flash('Your post has been created!', 'success')
         return redirect(url_for('main.index'))
     return render_template('new_post.html', title='New Post',
                            form=form, legend='New Post')
