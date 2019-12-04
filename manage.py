@@ -1,13 +1,9 @@
 from flask_script import Manager, Server
 from flask_migrate import Migrate, MigrateCommand
-from flask import Flask, render_template
-import sys
-import logging
-
 
 from app import create_app, db
 from app.models import User,Post
-app = Flask(__name__)
+
 app = create_app('production')
 
 manager = Manager(app)
@@ -23,8 +19,4 @@ def make_shell_context():
 
 if __name__ == '__main__':
     manager.run()
-    
-app.logger.addHandler(logging.StreamHandler(sys.stdout))
-app.logger.setLevel(logging.ERROR)
-
  
